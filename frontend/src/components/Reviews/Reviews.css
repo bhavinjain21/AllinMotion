@@ -1,0 +1,163 @@
+.reviews {
+  background: #1a57ff;
+  color: #fff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.reviews-container {
+  display: flex;
+  align-items: flex-start; 
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 60px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.reviews-heading {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+}
+
+.reviews-heading h2 {
+  font-size: 4rem;
+  font-weight: normal;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.reviews-heading em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.reviews-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #d0d8ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.reviews-link:hover {
+  color: #fff;
+}
+
+.reviews-stack {
+  position: relative;
+  flex: 2;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  min-height: 450px;
+  margin-left: -60px; 
+}
+
+.review-layer {
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 420px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  color: #111;
+}
+
+.review-video {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a57ff;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-btn:hover {
+  background: #1a57ff;
+  color: #fff;
+}
+
+.review-info {
+  padding: 20px;
+}
+
+.review-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #1a57ff;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.review-name span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .reviews-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .reviews-heading {
+    text-align: center;
+  }
+
+  .reviews-heading h2 {
+    font-size: 3.5rem;
+  }
+
+  .reviews-stack {
+    margin-top: 60px;
+    justify-content: center;
+    margin-left: 0;
+    min-height: 350px;
+  }
+
+  .review-layer {
+    transform: none !important;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .review-card {
+    width: 90%;
+  }
+}

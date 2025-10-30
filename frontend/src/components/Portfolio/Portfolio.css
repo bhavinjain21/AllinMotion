@@ -1,0 +1,148 @@
+.portfolio {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.portfolio-heading {
+  position: relative;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+}
+
+.portfolio-heading h2 {
+  font-size: 5rem;
+  line-height: 1;
+  text-align: center;
+  font-weight: normal;
+  color: #111;
+}
+
+.portfolio-heading .projects-count {
+  font-size: 1.5rem;
+  color: #555;
+  margin-left: 10px;
+}
+
+.portfolio-works {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.portfolio-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: stretch;
+  height: 300px; 
+}
+
+.row-big-small {
+  grid-template-columns: 2fr 1fr;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
+  color: #fff;
+}
+
+.play-btn {
+  align-self: center;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.overlay span {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.see-projects {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.see-btn {
+  background-color: #246bff;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(36, 107, 255, 0.3);
+}
+
+.see-btn:hover {
+  background-color: #1855d1;
+  box-shadow: 0 8px 18px rgba(36, 107, 255, 0.4);
+}
+
+.see-btn span {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.see-btn:hover span {
+  transform: translateX(5px) translateY(-5px);
+}
+
+@media (max-width: 900px) {
+  .portfolio-heading h2 {
+    font-size: 4rem;
+  }
+
+  .portfolio-row {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
