@@ -77,7 +77,7 @@ const HeroSection = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("http://localhost:8080/contact", formData);
+    const res = await axios.post("https://allinmotion-backend.onrender.com/contact", formData);
     setResponseMsg(res.data);
     setFormData({
       customerName: "",

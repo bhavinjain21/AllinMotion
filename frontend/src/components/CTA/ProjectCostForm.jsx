@@ -24,7 +24,7 @@ export default function ProjectCostForm({ onClose }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/contact/calculate-cost", formData);
+      const res = await axios.post("https://allinmotion-backend.onrender.com/contact/calculate-cost", formData);
       setPrice(res.data);
     } catch {
       setPrice("Error calculating cost");
